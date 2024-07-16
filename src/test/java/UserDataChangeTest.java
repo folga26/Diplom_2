@@ -1,11 +1,13 @@
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Random;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 
 
 public class UserDataChangeTest {
@@ -18,6 +20,7 @@ public class UserDataChangeTest {
     }
 
     @Test
+    @Step("Изменить данные пользователя с авторизацией")
     public void userDataChangeWithAuthTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";
@@ -41,19 +44,26 @@ public class UserDataChangeTest {
                 .post("/api/auth/login")
                 .then().extract().path("accessToken").toString();
 
-        Response response = given()
+        String user = given()
                 .header("Authorization", accessToken)
                 .header("Content-type", "application/json")
                 .body(jsonChangedData)
-                .patch("/api/auth/user");
-                 response.then().assertThat()
-                .statusCode(200);
-                //.body("user", containsString("{email=" + newEmail + ", name=" + newName + "}"));
+                .patch("/api/auth/user")
+                .then().extract().path("user").toString();
 
+        assertEquals(("{email=" + newEmail + ", name=" + newName + "}"), user);
+
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
 
     }
 
     @Test
+    @Step("Изменить данные пользователя без авторизации")
     public void userDataChangeWithoutAuthTest() {
         Random random = new Random();
         String newName = "Baggins" + random.nextInt(100);

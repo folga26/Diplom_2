@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Before;
@@ -19,6 +20,7 @@ public class LoginUser {
     }
 
     @Test
+    @Step("Авторизоваться под пользователем с валидными данными")
     public void loginWithValidCredentialsTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";
@@ -26,12 +28,11 @@ public class LoginUser {
         String jsonReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
         String jsonAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
 
-        given()
+        String accessToken = given()
                 .header("Content-type", "application/json")
                 .body(jsonReg)
                 .post("/api/auth/register")
-                .then()
-                .statusCode(200);
+                .then().extract().path("accessToken").toString();
 
         Response response = given()
                 .header("Content-type", "application/json")
@@ -44,10 +45,16 @@ public class LoginUser {
                 .and()
                 .statusCode(200);
 
-        //удалить пользователя
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
     }
 
     @Test
+    @Step("Авторизоваться с неверным паролем")
     public void loginWithInvalidPasswordTest() {
         Random random = new Random();
         String email = "hobbit" + random.nextInt(10000000) + "@yandex.ru";
@@ -55,12 +62,11 @@ public class LoginUser {
         String jsonReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
         String jsonAuthInvalid = "{\"email\": \"" + email + "\", \"password\": \"" + password + "111\"}";
 
-        given()
+        String accessToken = given()
                 .header("Content-type", "application/json")
                 .body(jsonReg)
                 .post("/api/auth/register")
-                .then()
-                .statusCode(200);
+                .then().extract().path("accessToken").toString();
 
 
         Response response = given()
@@ -74,7 +80,12 @@ public class LoginUser {
                 .and()
                 .statusCode(401);
 
-        //удалить пользователя
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
     }
 
 }

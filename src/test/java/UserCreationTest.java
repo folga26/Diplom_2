@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 
 import org.junit.Before;
@@ -18,36 +19,41 @@ public class UserCreationTest {
     }
 
     @Test
+    @Step("Зарегистрировать пользователя с валидными данными")
     public void validRegistrationTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";
         String password = "abc" + random.nextInt(10000000);
         String json = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
 
-        given()
+        String accessToken = given()
                 .header("Content-type", "application/json")
                 .body(json)
                 .post("/api/auth/register")
-                .then()
-                .statusCode(200);
+                .then().extract().path("accessToken").toString();
 
-        //удалить пользователя
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
 
     }
 
     @Test
+    @Step("Зарегистрировать пользователя с уже существующими данными")
     public void invalidRegistrationWithExistingParametersTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";
         String password = "abc" + random.nextInt(10000000);
         String json = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
 
-        given()
+        String accessToken = given()
                 .header("Content-type", "application/json")
                 .body(json)
                 .post("/api/auth/register")
-                .then()
-                .statusCode(200);
+                .then().extract().path("accessToken").toString();
 
         given()
                 .header("Content-type", "application/json")
@@ -55,10 +61,16 @@ public class UserCreationTest {
                 .post("/api/auth/register")
                 .then().statusCode(403);
 
-        //удалить пользователя
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
     }
 
     @Test
+    @Step("Зарегистрировать пользователя, не заполняя обязательное поле Имя")
     public void invalidRegistrationWithoutObligatoryNameTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";

@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Before;
@@ -20,6 +21,7 @@ public class OrderCreationTest {
     }
 
     @Test
+    @Step("Создать заказ с авторизацией")
     public void createOrderWithAuthTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";
@@ -50,10 +52,16 @@ public class OrderCreationTest {
                 .and()
                 .body("name", containsString("Space метеоритный флюоресцентный бургер"));
 
-        //удалить пользователя
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
     }
 
     @Test
+    @Step("Создать заказ без авторизации")
     public void createOrderWithoutAuthTest() {
 
         Response response = given()
@@ -67,6 +75,7 @@ public class OrderCreationTest {
     }
 
     @Test
+    @Step("Создать заказ без ингредиентов")
     public void createOrderWithNoIngredientsTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";
@@ -96,10 +105,16 @@ public class OrderCreationTest {
                 .and()
                 .body("message", containsString("Ingredient ids must be provided"));
 
-        //удалить пользователя
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
     }
 
     @Test
+    @Step("Создать заказ с неверным хэшем ингредиентов")
     public void createOrderWithInvalidIngredientsIdsTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";
@@ -127,10 +142,16 @@ public class OrderCreationTest {
                 .post("/api/orders")
                 .then().statusCode(500);
 
-        //удалить пользователя
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
     }
 
     @Test
+    @Step("Получить список заказов конкретного пользователя с авторизацией")
     public void getSpecificUserOrdersWithAuthTest() {
         Random random = new Random();
         String email = "something" + random.nextInt(10000000) + "@yandex.ru";
@@ -170,11 +191,17 @@ public class OrderCreationTest {
                 .and()
                 .body("orders", notNullValue());
 
-        //удалить пользователя
+        //удалить тестовые данные после проведения теста
+        given()
+                .header("Authorization", accessToken)
+                .header("Content-type", "application/json")
+                .delete("api/auth/user")
+                .then().statusCode(202);
 
     }
 
     @Test
+    @Step("Получить список заказов конкретного пользователя без авторизации")
     public void getSpecificUserOrdersWithoutAuthTest() {
         Response responseOrders = given()
                 .header("Content-type", "application/json")

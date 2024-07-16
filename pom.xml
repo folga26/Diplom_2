@@ -17,6 +17,8 @@
         <allure.version>2.15.0</allure.version>
     </properties>
 
+
+
     <dependencies>
 
         <dependency>
@@ -98,4 +100,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
