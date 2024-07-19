@@ -8,14 +8,15 @@ import org.junit.Test;
 
 import java.util.Random;
 
-import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.CoreMatchers.notNullValue;
 
-public class UserCreationTest {
+public class LoginUserTest {
 
     private static final String BASE_URL = "https://stellarburgers.nomoreparties.site";
     private String email;
     private String password;
     private String bodyReg;
+    private String bodyAuth;
     private String accessToken;
 
     @Before
@@ -30,30 +31,32 @@ public class UserCreationTest {
     }
 
     @Test
-    @DisplayName("Зарегистрировать пользователя с валидными данными")
-    public void validRegistrationTest() {
+    @DisplayName("Авторизоваться под пользователем с валидными данными")
+    public void loginWithValidCredentialsTest() {
         UserClient userClient = new UserClient();
         Random random = new Random();
         this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
         this.password = "abc" + random.nextInt(10000000);
         this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        this.bodyAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
         Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
         this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
-        userRegistrationResponse.then().statusCode(200).and().assertThat().body("accessToken", notNullValue()).body("refreshToken", notNullValue());
+        Response userAuthorizationResponse = userClient.userAuthorization(bodyAuth);
+        userAuthorizationResponse.then().statusCode(200).assertThat().body("accessToken", notNullValue()).body("refreshToken", notNullValue());
     }
 
     @Test
-    @DisplayName("Зарегистрировать пользователя с уже существующими данными")
-    public void invalidRegistrationWithExistingParametersTest() {
+    @DisplayName("Авторизоваться с неверным паролем и получить ошибку")
+    public void loginWithInvalidPasswordTest() {
         UserClient userClient = new UserClient();
         Random random = new Random();
         this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
         this.password = "abc" + random.nextInt(10000000);
         this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        this.bodyAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "11111\"}";
         Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
         this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
-        userRegistrationResponse.then().statusCode(200).and().assertThat().body("accessToken", notNullValue()).body("refreshToken", notNullValue());
-        Response userRepeatCredentialsRegistrationResponse = userClient.newUserRegistration(bodyReg);
-        userRepeatCredentialsRegistrationResponse.then().statusCode(403);
+        Response userAuthorizationResponse = userClient.userAuthorization(bodyAuth);
+        userAuthorizationResponse.then().statusCode(401);
     }
 }

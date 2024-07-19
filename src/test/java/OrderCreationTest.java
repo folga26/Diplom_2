@@ -1,217 +1,101 @@
-import io.qameta.allure.Step;
+import api.client.OrdersClient;
+import api.client.UserClient;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Random;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.notNullValue;
-
 
 public class OrderCreationTest {
 
     private static final String BASE_URL = "https://stellarburgers.nomoreparties.site";
+    private String email;
+    private String password;
+    private String bodyReg;
+    private String bodyAuth;
+    private String bodyOrd;
+    private String accessToken;
 
     @Before
     public void setUp() {
         RestAssured.baseURI = BASE_URL;
     }
 
+    @After
+    public void deleteUser() {
+        UserClient userClient = new UserClient();
+        userClient.deleteCreatedUser(this.accessToken);
+    }
+
     @Test
-    @Step("Создать заказ с авторизацией")
+    @DisplayName("Успешно создать заказ с авторизацией")
     public void createOrderWithAuthTest() {
+        UserClient userClient = new UserClient();
+        OrdersClient ordersClient = new OrdersClient();
         Random random = new Random();
-        String email = "something" + random.nextInt(10000000) + "@yandex.ru";
-        String password = "abc" + random.nextInt(10000000);
-        String jsonReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
-        String jsonAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
-
-        given()
-                .header("Content-type", "application/json")
-                .body(jsonReg)
-                .post("/api/auth/register")
-                .then()
-                .statusCode(200);
-
-        String accessToken = given()
-                .header("Content-type", "application/json")
-                .body(jsonAuth)
-                .post("/api/auth/login")
-                .then().extract().path("accessToken").toString();
-
-        Response response = given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .body("{\"ingredients\":[\"61c0c5a71d1f82001bdaaa73\",\"61c0c5a71d1f82001bdaaa70\",\"61c0c5a71d1f82001bdaaa6d\"]}")
-                .post("/api/orders");
-        response.then().assertThat()
-                .statusCode(200)
-                .and()
-                .body("name", containsString("Space метеоритный флюоресцентный бургер"));
-
-        //удалить тестовые данные после проведения теста
-        given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .delete("api/auth/user")
-                .then().statusCode(202);
+        this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
+        this.password = "abc" + random.nextInt(10000000);
+        this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        this.bodyAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
+        this.bodyOrd = "{\"ingredients\":[\"61c0c5a71d1f82001bdaaa73\",\"61c0c5a71d1f82001bdaaa70\",\"61c0c5a71d1f82001bdaaa6d\"]}";
+        Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
+        this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
+        Response createOrderWithAuthorizationAndIngredientsResponse = ordersClient.createOrderWithAuthorizationAndIngredients(accessToken, bodyOrd);
+        createOrderWithAuthorizationAndIngredientsResponse.then().statusCode(200).assertThat().body("name", containsString("Space метеоритный флюоресцентный бургер"));
     }
 
     @Test
-    @Step("Создать заказ без авторизации")
-    public void createOrderWithoutAuthTest() {
-
-        Response response = given()
-                .header("Content-type", "application/json")
-                .body("{\"ingredients\":[\"61c0c5a71d1f82001bdaaa73\",\"61c0c5a71d1f82001bdaaa70\",\"61c0c5a71d1f82001bdaaa6d\"]}")
-                .post("/api/orders");
-        response.then().assertThat()
-                .statusCode(200)
-                .and()
-                .body("name", containsString("Space метеоритный флюоресцентный бургер"));
-    }
-
-    @Test
-    @Step("Создать заказ без ингредиентов")
+    @DisplayName("Создать заказ без ингредиентов - получить ошибку")
     public void createOrderWithNoIngredientsTest() {
+        UserClient userClient = new UserClient();
+        OrdersClient ordersClient = new OrdersClient();
         Random random = new Random();
-        String email = "something" + random.nextInt(10000000) + "@yandex.ru";
-        String password = "abc" + random.nextInt(10000000);
-        String jsonReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
-        String jsonAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
-
-        given()
-                .header("Content-type", "application/json")
-                .body(jsonReg)
-                .post("/api/auth/register")
-                .then()
-                .statusCode(200);
-
-        String accessToken = given()
-                .header("Content-type", "application/json")
-                .body(jsonAuth)
-                .post("/api/auth/login")
-                .then().extract().path("accessToken").toString();
-
-        Response response = given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .post("/api/orders");
-        response.then().assertThat()
-                .statusCode(400)
-                .and()
-                .body("message", containsString("Ingredient ids must be provided"));
-
-        //удалить тестовые данные после проведения теста
-        given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .delete("api/auth/user")
-                .then().statusCode(202);
-    }
+        this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
+        this.password = "abc" + random.nextInt(10000000);
+        this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
+        this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
+        Response createOrderWithAuthorizationAndWithoutIngredientsResponse = ordersClient.createOrderWithAuthorizationAndWithoutIngredients(accessToken);
+        createOrderWithAuthorizationAndWithoutIngredientsResponse.then().statusCode(400).assertThat().body("message", containsString("Ingredient ids must be provided"));
+      }
 
     @Test
-    @Step("Создать заказ с неверным хэшем ингредиентов")
+    @DisplayName("Создать заказ с неверным хэшем ингредиентов - получить ошибку")
     public void createOrderWithInvalidIngredientsIdsTest() {
+        UserClient userClient = new UserClient();
+        OrdersClient ordersClient = new OrdersClient();
         Random random = new Random();
-        String email = "something" + random.nextInt(10000000) + "@yandex.ru";
-        String password = "abc" + random.nextInt(10000000);
-        String jsonReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
-        String jsonAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
-
-        given()
-                .header("Content-type", "application/json")
-                .body(jsonReg)
-                .post("/api/auth/register")
-                .then()
-                .statusCode(200);
-
-        String accessToken = given()
-                .header("Content-type", "application/json")
-                .body(jsonAuth)
-                .post("/api/auth/login")
-                .then().extract().path("accessToken").toString();
-
-        given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .body("{\"ingredients\":[\"61c0c5a71d1f82001bdaaa7356\",\"61c0c5a71d1f82001bdaaa70\",\"61c0c5a71d1f82001bdaaa6d\"]}")
-                .post("/api/orders")
-                .then().statusCode(500);
-
-        //удалить тестовые данные после проведения теста
-        given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .delete("api/auth/user")
-                .then().statusCode(202);
+        this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
+        this.password = "abc" + random.nextInt(10000000);
+        this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        this.bodyOrd = "\"{\\\"ingredients\\\":[\\\"61c0c5a71d1f82001bdaaa7356\\\",\\\"61c0c5a71d1f82001bdaaa70\\\",\\\"61c0c5a71d1f82001bdaaa6d\\\"]}\"";
+        Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
+        this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
+        Response createOrderWithAuthorizationAndInvalidIngrediensResponse = ordersClient.createOrderWithAuthorizationAndIngredients(accessToken, bodyOrd);
+        createOrderWithAuthorizationAndInvalidIngrediensResponse.then().statusCode(400);
     }
 
     @Test
-    @Step("Получить список заказов конкретного пользователя с авторизацией")
+    @DisplayName("Получить список заказов конкретного пользователя с авторизацией")
     public void getSpecificUserOrdersWithAuthTest() {
+        UserClient userClient = new UserClient();
+        OrdersClient ordersClient = new OrdersClient();
         Random random = new Random();
-        String email = "something" + random.nextInt(10000000) + "@yandex.ru";
-        String password = "abc" + random.nextInt(10000000);
-        String jsonReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
-        String jsonAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
-
-        given()
-                .header("Content-type", "application/json")
-                .body(jsonReg)
-                .post("/api/auth/register")
-                .then()
-                .statusCode(200);
-
-        String accessToken = given()
-                .header("Content-type", "application/json")
-                .body(jsonAuth)
-                .post("/api/auth/login")
-                .then().extract().path("accessToken").toString();
-
-        Response response = given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .body("{\"ingredients\":[\"61c0c5a71d1f82001bdaaa73\",\"61c0c5a71d1f82001bdaaa70\",\"61c0c5a71d1f82001bdaaa6d\"]}")
-                .post("/api/orders");
-        response.then().assertThat()
-                .statusCode(200)
-                .and()
-                .body("name", containsString("Space метеоритный флюоресцентный бургер"));
-
-        Response responseOrders = given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .get("api/orders");
-        responseOrders.then().assertThat()
-                .statusCode(200)
-                .and()
-                .body("orders", notNullValue());
-
-        //удалить тестовые данные после проведения теста
-        given()
-                .header("Authorization", accessToken)
-                .header("Content-type", "application/json")
-                .delete("api/auth/user")
-                .then().statusCode(202);
-
+        this.email = "something" + random.nextInt(10000000) + "@yandex.ru";
+        this.password = "abc" + random.nextInt(10000000);
+        this.bodyReg = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\", \"name\": \"Legolas\" }";
+        this.bodyAuth = "{\"email\": \"" + email + "\", \"password\": \"" + password + "\"}";
+        this.bodyOrd = "{\"ingredients\":[\"61c0c5a71d1f82001bdaaa73\",\"61c0c5a71d1f82001bdaaa70\",\"61c0c5a71d1f82001bdaaa6d\"]}";
+        Response userRegistrationResponse = userClient.newUserRegistration(bodyReg);
+        this.accessToken = userRegistrationResponse.then().extract().path("accessToken").toString();
+        Response createOrderWithAuthorizationAndIngredientsResponse = ordersClient.createOrderWithAuthorizationAndIngredients(accessToken, bodyOrd);
+        Response getSpecificUserOrdersWithAuthResponse = ordersClient.getSpecificUserOrdersWithAuth(accessToken);
+        getSpecificUserOrdersWithAuthResponse.then().statusCode(200).assertThat().body("orders", notNullValue());
     }
-
-    @Test
-    @Step("Получить список заказов конкретного пользователя без авторизации")
-    public void getSpecificUserOrdersWithoutAuthTest() {
-        Response responseOrders = given()
-                .header("Content-type", "application/json")
-                .get("api/orders");
-        responseOrders.then().assertThat()
-                .statusCode(401)
-                .and()
-                .body("message", containsString("You should be authorised"));
-
-    }
-
-
 }

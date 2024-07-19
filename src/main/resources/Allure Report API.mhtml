@@ -1,83 +1,83 @@
 From: <Saved by Blink>
-Snapshot-Content-Location: http://192.168.1.70:54268/index.html
+Snapshot-Content-Location: http://192.168.1.70:20248/index.html#suites
 Subject: Allure Report
-Date: Tue, 16 Jul 2024 21:40:19 +0300
+Date: Sat, 20 Jul 2024 00:04:53 +0300
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--rZ17TLGpzcShukILepWRMCFs2Q0TZoEfKAkV4Tndux----"
+	boundary="----MultipartBoundary--vjwy29Gx7CFEfA17rRPpiFDDYu5W2CWwh5zM2itorQ----"
 
 
-------MultipartBoundary--rZ17TLGpzcShukILepWRMCFs2Q0TZoEfKAkV4Tndux----
+------MultipartBoundary--vjwy29Gx7CFEfA17rRPpiFDDYu5W2CWwh5zM2itorQ----
 Content-Type: text/html
-Content-ID: <frame-5D9345D246FE7571B29F7B86753AC844@mhtml.blink>
+Content-ID: <frame-16FEE64A050F04CF96881929BCC8FC4B@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
-Content-Location: http://192.168.1.70:54268/index.html
+Content-Location: http://192.168.1.70:20248/index.html#suites
 
 <!DOCTYPE html><html dir=3D"ltr"><head><meta http-equiv=3D"Content-Type" co=
 ntent=3D"text/html; charset=3DUTF-8">
    =20
     <title>Allure Report</title>
-    <link rel=3D"favicon" href=3D"http://192.168.1.70:54268/favicon.ico?v=
+    <link rel=3D"favicon" href=3D"http://192.168.1.70:20248/favicon.ico?v=
 =3D2">
     <link rel=3D"stylesheet" type=3D"text/css" href=3D"http://192.168.1.70:=
-54268/styles.css">
-        <link rel=3D"stylesheet" href=3D"http://192.168.1.70:54268/plugins/=
+20248/styles.css">
+        <link rel=3D"stylesheet" href=3D"http://192.168.1.70:20248/plugins/=
 screen-diff/styles.css">
 </head>
 <body>
 <div id=3D"alert"></div>
 <div id=3D"content"><div class=3D"app"><div class=3D"app__nav"><div class=
 =3D"side-nav"><div class=3D"side-nav__head">
-    <a href=3D"http://192.168.1.70:54268/" class=3D"side-nav__brand">
+    <a href=3D"http://192.168.1.70:20248/" class=3D"side-nav__brand">
         <span class=3D"side-nav__brand-text">Allure</span>
     </a>
 </div>
 <ul class=3D"side-nav__menu">
         <li class=3D"side-nav__item" data-tooltip=3D"Overview">
-            <a href=3D"http://192.168.1.70:54268/index.html#" class=3D"side=
--nav__link side-nav__link_active">
+            <a href=3D"http://192.168.1.70:20248/index.html#" class=3D"side=
+-nav__link">
                 <span class=3D"side-nav__icon fa fa-home"></span>
                 <div class=3D"side-nav__text">Overview</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Categories">
-            <a href=3D"http://192.168.1.70:54268/index.html#categories" cla=
+            <a href=3D"http://192.168.1.70:20248/index.html#categories" cla=
 ss=3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-flag"></span>
                 <div class=3D"side-nav__text">Categories</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Suites">
-            <a href=3D"http://192.168.1.70:54268/index.html#suites" class=
-=3D"side-nav__link">
+            <a href=3D"http://192.168.1.70:20248/index.html#suites" class=
+=3D"side-nav__link side-nav__link_active">
                 <span class=3D"side-nav__icon fa fa-briefcase"></span>
                 <div class=3D"side-nav__text">Suites</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Graphs">
-            <a href=3D"http://192.168.1.70:54268/index.html#graph" class=3D=
+            <a href=3D"http://192.168.1.70:20248/index.html#graph" class=3D=
 "side-nav__link">
                 <span class=3D"side-nav__icon fa fa-bar-chart"></span>
                 <div class=3D"side-nav__text">Graphs</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Timeline">
-            <a href=3D"http://192.168.1.70:54268/index.html#timeline" class=
+            <a href=3D"http://192.168.1.70:20248/index.html#timeline" class=
 =3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-clock-o"></span>
                 <div class=3D"side-nav__text">Timeline</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Behaviors">
-            <a href=3D"http://192.168.1.70:54268/index.html#behaviors" clas=
+            <a href=3D"http://192.168.1.70:20248/index.html#behaviors" clas=
 s=3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-list"></span>
                 <div class=3D"side-nav__text">Behaviors</div>
             </a>
         </li>
         <li class=3D"side-nav__item" data-tooltip=3D"Packages">
-            <a href=3D"http://192.168.1.70:54268/index.html#packages" class=
+            <a href=3D"http://192.168.1.70:20248/index.html#packages" class=
 =3D"side-nav__link">
                 <span class=3D"side-nav__icon fa fa-align-left"></span>
                 <div class=3D"side-nav__text">Packages</div>
@@ -101,162 +101,458 @@ all side-nav__language-small_lang_en">
     </div>
 </div>
 </div></div>
-<div class=3D"app__content"><div class=3D"widgets-grid"><div class=3D"widge=
-ts-grid__col"><div class=3D"widget island" data-id=3D"summary">
-    <div class=3D"widget__handle">
-        <span class=3D"draggable-icon"></span>
-    </div>
-    <div class=3D"widget__body"><div><div class=3D"widget__flex-line">
-    <div class=3D"widget__column">
-        <h2 class=3D"widget__title">
-                Allure Report 7/16/2024
-            <div class=3D"widget__subtitle">
-                15:21:45 - 15:22:01 (16s 530ms)
-            </div>
-        </h2>
-        <div class=3D"summary-widget__stats splash">
-            <div class=3D"splash__title">11</div>
-            <div class=3D"splash__subtitle">test cases</div>
-        </div>
-    </div>
-    <div class=3D"widget__column summary-widget__chart"><div><svg class=3D"=
-chart__svg">
-    <g class=3D"chart__plot" transform=3D"translate(155.975,90)"><path clas=
-s=3D"chart__arc chart__fill_status_failed" d=3D"M4.898587196589413e-15,-80L=
-3.91886975727153e-15,-64Z"></path><path class=3D"chart__arc chart__fill_sta=
-tus_broken" d=3D"M4.898587196589413e-15,-80L3.91886975727153e-15,-64Z"></pa=
-th><path class=3D"chart__arc chart__fill_status_skipped" d=3D"M4.8985871965=
-89413e-15,-80L3.91886975727153e-15,-64Z"></path><path class=3D"chart__arc c=
-hart__fill_status_passed" d=3D"M4.898587196589413e-15,-80A80,80,0,1,1,-4.89=
-8587196589413e-15,80A80,80,0,1,1,4.898587196589413e-15,-80M-1.1756609271814=
-59e-14,-64A64,64,0,1,0,1.175660927181459e-14,64A64,64,0,1,0,-1.175660927181=
-459e-14,-64Z"></path><path class=3D"chart__arc chart__fill_status_unknown" =
-d=3D"M-1.4695761589768237e-14,-80L-1.175660927181459e-14,-64Z"></path><text=
- class=3D"chart__caption" dy=3D"0.4em" style=3D"font-size: 26.6667px;">100%=
-</text></g>
-    <g class=3D"chart__axis chart__axis_x"></g>
-    <g class=3D"chart__axis chart__axis_y"></g>
-</svg></div></div>
+<div class=3D"app__content"><div class=3D"side-by-side"><div class=3D"side-=
+by-side__left" style=3D"width: calc(50% - 3.5px);"><div class=3D"tree"><div=
+ class=3D"pane__title pane__title_borderless">
+    <span class=3D"pane__title-text">Suites</span>
+    <div class=3D"pane__search"><div class=3D"search"><div class=3D"search_=
+_container">
+    <input class=3D"search__input" type=3D"text">
 </div>
 </div></div>
-</div><div class=3D"widget island" data-id=3D"suites">
-    <div class=3D"widget__handle">
-        <span class=3D"draggable-icon"></span>
-    </div>
-    <div class=3D"widget__body"><div><h2 class=3D"widget__title">
-    Suites
-    <span class=3D"widget__subtitle">3 items total</span>
-</h2>
-<div class=3D"table table_hover widget__table">
-        <a class=3D"table__row" href=3D"http://192.168.1.70:54268/index.htm=
-l#suites/ef4c98f15c9f1612031f95dffca9f31e">
-            <div class=3D"table__col">OrderCreationTest</div>
-            <div class=3D"table__col">
-                <div class=3D"bar"><div class=3D"bar__fill bar__fill_status=
-_passed" style=3D"flex-grow: 6">6</div></div>
-            </div>
-        </a>
-        <a class=3D"table__row" href=3D"http://192.168.1.70:54268/index.htm=
-l#suites/749777791fc1702e78ab3acbc6963f58">
-            <div class=3D"table__col">UserCreationTest</div>
-            <div class=3D"table__col">
-                <div class=3D"bar"><div class=3D"bar__fill bar__fill_status=
-_passed" style=3D"flex-grow: 3">3</div></div>
-            </div>
-        </a>
-        <a class=3D"table__row" href=3D"http://192.168.1.70:54268/index.htm=
-l#suites/31e367474d2dbd6ed6cac4ab7b7e1301">
-            <div class=3D"table__col">UserDataChangeTest</div>
-            <div class=3D"table__col">
-                <div class=3D"bar"><div class=3D"bar__fill bar__fill_status=
-_passed" style=3D"flex-grow: 2">2</div></div>
-            </div>
-        </a>
-        <a class=3D"table__row" href=3D"http://192.168.1.70:54268/index.htm=
-l#suites">
-            <div class=3D"table__col table__col_center">
-                Show all
-            </div>
-        </a>
-</div>
-</div></div>
-</div><div class=3D"widget island" data-id=3D"environment">
-    <div class=3D"widget__handle">
-        <span class=3D"draggable-icon"></span>
-    </div>
-    <div class=3D"widget__body"><div><h2 class=3D"widget__title">
-    Environment
-</h2>
-    <div class=3D"widget__noitems">There are no environment variables</div>
-</div></div>
-</div><div class=3D"widget island" data-id=3D"behaviors">
-    <div class=3D"widget__handle">
-        <span class=3D"draggable-icon"></span>
-    </div>
-    <div class=3D"widget__body"><div><h2 class=3D"widget__title">
-    Features by stories
-    <span class=3D"widget__subtitle">11 items total</span>
-</h2>
-<div class=3D"table table_hover widget__table">
-        <a class=3D"table__row" href=3D"http://192.168.1.70:54268/index.htm=
-l#behaviors">
-            <div class=3D"table__col table__col_center">
-                Show all
-            </div>
-        </a>
-</div>
-</div></div>
-</div></div><div class=3D"widgets-grid__col"><div class=3D"widget island" d=
-ata-id=3D"history-trend">
-    <div class=3D"widget__handle">
-        <span class=3D"draggable-icon"></span>
-    </div>
-    <div class=3D"widget__body"><div class=3D"history-trend"><h2 class=3D"w=
-idget__title">
-    Trend
-</h2>
-<div class=3D"history-trend__chart"><div><div class=3D"widget__noitems">The=
-re is nothing to show</div></div></div>
-</div></div>
-</div><div class=3D"widget island" data-id=3D"categories">
-    <div class=3D"widget__handle">
-        <span class=3D"draggable-icon"></span>
-    </div>
-    <div class=3D"widget__body"><div><h2 class=3D"widget__title">
-    Categories
-    <span class=3D"widget__subtitle">0 items total</span>
-</h2>
-<div class=3D"table table_hover widget__table">
-        <a class=3D"table__row" href=3D"http://192.168.1.70:54268/index.htm=
-l#categories">
-            <div class=3D"table__col table__col_center">
-                Show all
-            </div>
-        </a>
-</div>
-</div></div>
-</div><div class=3D"widget island" data-id=3D"executors">
-    <div class=3D"widget__handle">
-        <span class=3D"draggable-icon"></span>
-    </div>
-    <div class=3D"widget__body"><div><h2 class=3D"widget__title">
-    Executors
-</h2>
-<div class=3D"table table_hover widget__table">
-    <span class=3D"table__row">
-        <div class=3D"table__col executor">
-            <span class=3D"executor-icon executor-icon__maven">&nbsp;</span=
->
-            Maven
-        </div>
-            <div class=3D"table__col table__col_right executor">
-                    Sprint_7
-
-            </div>
+    <span class=3D"pane__controls">
+        <a class=3D"fa fa-info-circle tree__control tree__info" data-toolti=
+p=3D"Toggle groups info"></a>
+            <a class=3D"fa fa-download tree__control tree__download" data-t=
+ooltip=3D"Download CSV" href=3D"http://192.168.1.70:20248/data/suites.csv" =
+download=3D""></a>
     </span>
 </div>
+
+<div class=3D"tree__ctrl">
+    <div class=3D"tree__sorter"><div class=3D"sorter"><div class=3D"sorter"=
+>
+    <div class=3D"sorter__item" data-name=3D"sorter.order" data-asc=3D"fals=
+e">
+        <span class=3D"sorter sorter__name">order</span>
+        <span class=3D"fa-stack sorter__icon">
+            <i class=3D"fa fa-sort-asc fa-stack-1x sorter"></i>
+            <i class=3D"fa fa-sort-desc fa-stack-1x sorter"></i>
+        </span>
+    </div>
+    <div class=3D"sorter__item" data-name=3D"sorter.name" data-asc=3D"true"=
+>
+        <span class=3D"sorter sorter_enabled sorter__name">name</span>
+        <span class=3D"fa-stack sorter__icon">
+            <i class=3D"fa fa-sort-asc fa-stack-1x sorter sorter_enabled"><=
+/i>
+            <i class=3D"fa fa-sort-desc fa-stack-1x sorter"></i>
+        </span>
+    </div>
+    <div class=3D"sorter__item" data-name=3D"sorter.duration" data-asc=3D"f=
+alse">
+        <span class=3D"sorter sorter__name">duration</span>
+        <span class=3D"fa-stack sorter__icon">
+            <i class=3D"fa fa-sort-asc fa-stack-1x sorter"></i>
+            <i class=3D"fa fa-sort-desc fa-stack-1x sorter"></i>
+        </span>
+    </div>
+    <div class=3D"sorter__item" data-name=3D"sorter.status" data-asc=3D"fal=
+se">
+        <span class=3D"sorter sorter__name">status</span>
+        <span class=3D"fa-stack sorter__icon">
+            <i class=3D"fa fa-sort-asc fa-stack-1x sorter"></i>
+            <i class=3D"fa fa-sort-desc fa-stack-1x sorter"></i>
+        </span>
+    </div>
+</div>
 </div></div>
+    <div class=3D"tree__strut"></div>
+    <div class=3D"tree__filter"><div class=3D"status-toggle"><div class=3D"=
+status-toggle__items">
+    Status:
+        <div class=3D"status-toggle__item">
+            <span class=3D"y-label y-label_status_failed" data-status=3D"fa=
+iled" data-tooltip=3D"Hide test results with Failed status">0</span>
+        </div>
+        <div class=3D"status-toggle__item">
+            <span class=3D"y-label y-label_status_broken" data-status=3D"br=
+oken" data-tooltip=3D"Hide test results with Broken status">0</span>
+        </div>
+        <div class=3D"status-toggle__item">
+            <span class=3D"y-label y-label_status_passed" data-status=3D"pa=
+ssed" data-tooltip=3D"Hide test results with Passed status">13</span>
+        </div>
+        <div class=3D"status-toggle__item">
+            <span class=3D"y-label y-label_status_skipped" data-status=3D"s=
+kipped" data-tooltip=3D"Hide test results with Skipped status">0</span>
+        </div>
+        <div class=3D"status-toggle__item">
+            <span class=3D"y-label y-label_status_unknown" data-status=3D"u=
+nknown" data-tooltip=3D"Hide test results with Unknown status">0</span>
+        </div>
+</div></div></div>
+    <div class=3D"tree__filter-marks"><div class=3D"marks-toggle"><div clas=
+s=3D"marks-toggle__items">
+    Marks:
+        <div class=3D"marks-toggle__item">
+            <span class=3D"n-label-mark n-label_mark_flaky" data-mark=3D"fl=
+aky" data-tooltip=3D"Show Flaky test results"><span class=3D"fa fa-bomb [ob=
+ject Object]" data-tooltip=3D"Test is flaky"></span></span>
+        </div>
+        <div class=3D"marks-toggle__item">
+            <span class=3D"n-label-mark n-label_mark_newFailed" data-mark=
+=3D"newFailed" data-tooltip=3D"Show New Failed test results"><span class=3D=
+"fa fa-warning [object Object]" data-tooltip=3D"Test is new failed."></span=
+></span>
+        </div>
+</div></div></div>
+</div>
+
+<div class=3D"tree__content"><div class=3D"tree"><div class=3D"tree__conten=
+t" data-uid=3D"98d3104e051c652961429bf95fa0b5d6">
+    <div class=3D"node node__expanded">
+        <div class=3D"node__title long-line" data-uid=3D"6a7a4d701ca4633fe5=
+5639951c8a6b75">
+            <span class=3D"node__arrow block__arrow"><span class=3D"angle f=
+a fa-angle-right fa-fw fa-lg"></span></span>
+                <div class=3D"node__name">
+                    LoginUserTest
+                </div>
+            <div class=3D"tree__strut">&nbsp;</div>
+            <span class=3D"node__stats">
+                <span class=3D"label label_status_passed">2</span>=20
+            </span>
+        </div>
+
+        <div class=3D"node__children">
+<a class=3D"node node__leaf" href=3D"http://192.168.1.70:20248/index.html#s=
+uites/6a7a4d701ca4633fe55639951c8a6b75/8a4322545682a1c4/">
+    <div class=3D"node__title" data-uid=3D"8a4322545682a1c4" data-parentuid=
+=3D"6a7a4d701ca4633fe55639951c8a6b75">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#2</div>
+        <div class=3D"node__name">
+            =D0=90=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D1=
+=82=D1=8C=D1=81=D1=8F =D0=BF=D0=BE=D0=B4 =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=
+=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B5=D0=BC =D1=81 =D0=B2=D0=B0=D0=BB=D0=
+=B8=D0=B4=D0=BD=D1=8B=D0=BC=D0=B8 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=BC=D0=
+=B8
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">1s 044ms</div>
+    </div>
+</a>
+<a class=3D"node node__leaf" href=3D"http://192.168.1.70:20248/index.html#s=
+uites/6a7a4d701ca4633fe55639951c8a6b75/a140db03cb0893f1/">
+    <div class=3D"node__title" data-uid=3D"a140db03cb0893f1" data-parentuid=
+=3D"6a7a4d701ca4633fe55639951c8a6b75">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#1</div>
+        <div class=3D"node__name">
+            =D0=90=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D1=
+=82=D1=8C=D1=81=D1=8F =D1=81 =D0=BD=D0=B5=D0=B2=D0=B5=D1=80=D0=BD=D1=8B=D0=
+=BC =D0=BF=D0=B0=D1=80=D0=BE=D0=BB=D0=B5=D0=BC =D0=B8 =D0=BF=D0=BE=D0=BB=D1=
+=83=D1=87=D0=B8=D1=82=D1=8C =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D1=83
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">6s 016ms</div>
+    </div>
+</a>
+        </div>
+    </div>
+    <div class=3D"node node__expanded">
+        <div class=3D"node__title long-line node__expanded" data-uid=3D"132=
+aa8e6309c7ade3f4d85ee3a491ccc">
+            <span class=3D"node__arrow block__arrow"><span class=3D"angle f=
+a fa-angle-right fa-fw fa-lg"></span></span>
+                <div class=3D"node__name">
+                    NegativeWithoutSavedDataTest
+                </div>
+            <div class=3D"tree__strut">&nbsp;</div>
+            <span class=3D"node__stats">
+                <span class=3D"label label_status_passed">4</span>=20
+            </span>
+        </div>
+
+        <div class=3D"node__children">
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/132aa8e6309c7ade3f4d85ee3a491ccc/306c3d1125d2cde5/">
+    <div class=3D"node__title node__expanded" data-uid=3D"306c3d1125d2cde5"=
+ data-parentuid=3D"132aa8e6309c7ade3f4d85ee3a491ccc">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#2</div>
+        <div class=3D"node__name">
+            =D0=97=D0=B0=D1=80=D0=B5=D0=B3=D0=B8=D1=81=D1=82=D1=80=D0=B8=D1=
+=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=
+=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F, =D0=BD=D0=B5 =D0=B7=D0=B0=D0=BF=D0=BE=D0=
+=BB=D0=BD=D1=8F=D1=8F =D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=
+=8C=D0=BD=D0=BE=D0=B5 =D0=BF=D0=BE=D0=BB=D0=B5 =D0=98=D0=BC=D1=8F, =D0=BF=
+=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=
+=D1=83
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">133ms</div>
+    </div>
+</a>
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/132aa8e6309c7ade3f4d85ee3a491ccc/c7a1c2c92f560417/">
+    <div class=3D"node__title node__expanded" data-uid=3D"c7a1c2c92f560417"=
+ data-parentuid=3D"132aa8e6309c7ade3f4d85ee3a491ccc">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#1</div>
+        <div class=3D"node__name">
+            =D0=98=D0=B7=D0=BC=D0=B5=D0=BD=D0=B8=D1=82=D1=8C =D0=B4=D0=B0=
+=D0=BD=D0=BD=D1=8B=D0=B5 =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=
+=D1=82=D0=B5=D0=BB=D1=8F =D0=B1=D0=B5=D0=B7 =D0=B0=D0=B2=D1=82=D0=BE=D1=80=
+=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8 - =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=
+=D1=82=D1=8C =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D1=83
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">164ms</div>
+    </div>
+</a>
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/132aa8e6309c7ade3f4d85ee3a491ccc/4e48b4990096255/">
+    <div class=3D"node__title node__expanded" data-uid=3D"4e48b4990096255" =
+data-parentuid=3D"132aa8e6309c7ade3f4d85ee3a491ccc">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#3</div>
+        <div class=3D"node__name">
+            =D0=9F=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C =D1=81=D0=BF=
+=D0=B8=D1=81=D0=BE=D0=BA =D0=B7=D0=B0=D0=BA=D0=B0=D0=B7=D0=BE=D0=B2 =D0=BA=
+=D0=BE=D0=BD=D0=BA=D1=80=D0=B5=D1=82=D0=BD=D0=BE=D0=B3=D0=BE =D0=BF=D0=BE=
+=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B1=D0=B5=
+=D0=B7 =D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8, =
+=D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C =D0=BE=D1=88=D0=B8=D0=B1=
+=D0=BA=D1=83
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">176ms</div>
+    </div>
+</a>
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/132aa8e6309c7ade3f4d85ee3a491ccc/2bc2974ea998c5c5/">
+    <div class=3D"node__title node__expanded" data-uid=3D"2bc2974ea998c5c5"=
+ data-parentuid=3D"132aa8e6309c7ade3f4d85ee3a491ccc">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#4</div>
+        <div class=3D"node__name">
+            =D0=9F=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C =D1=81=D0=BF=
+=D0=B8=D1=81=D0=BE=D0=BA =D0=B7=D0=B0=D0=BA=D0=B0=D0=B7=D0=BE=D0=B2 =D0=BA=
+=D0=BE=D0=BD=D0=BA=D1=80=D0=B5=D1=82=D0=BD=D0=BE=D0=B3=D0=BE =D0=BF=D0=BE=
+=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B1=D0=B5=
+=D0=B7 =D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8, =
+=D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C =D0=BE=D1=88=D0=B8=D0=B1=
+=D0=BA=D1=83
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">202ms</div>
+    </div>
+</a>
+        </div>
+    </div>
+    <div class=3D"node node__expanded">
+        <div class=3D"node__title long-line node__expanded" data-uid=3D"ef4=
+c98f15c9f1612031f95dffca9f31e">
+            <span class=3D"node__arrow block__arrow"><span class=3D"angle f=
+a fa-angle-right fa-fw fa-lg"></span></span>
+                <div class=3D"node__name">
+                    OrderCreationTest
+                </div>
+            <div class=3D"tree__strut">&nbsp;</div>
+            <span class=3D"node__stats">
+                <span class=3D"label label_status_passed">4</span>=20
+            </span>
+        </div>
+
+        <div class=3D"node__children">
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/ef4c98f15c9f1612031f95dffca9f31e/f293b116674668a0/">
+    <div class=3D"node__title node__expanded" data-uid=3D"f293b116674668a0"=
+ data-parentuid=3D"ef4c98f15c9f1612031f95dffca9f31e">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#3</div>
+        <div class=3D"node__name">
+            =D0=9F=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C =D1=81=D0=BF=
+=D0=B8=D1=81=D0=BE=D0=BA =D0=B7=D0=B0=D0=BA=D0=B0=D0=B7=D0=BE=D0=B2 =D0=BA=
+=D0=BE=D0=BD=D0=BA=D1=80=D0=B5=D1=82=D0=BD=D0=BE=D0=B3=D0=BE =D0=BF=D0=BE=
+=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D1=81 =D0=B0=
+=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B5=D0=B9
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">2s 438ms</div>
+    </div>
+</a>
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/ef4c98f15c9f1612031f95dffca9f31e/6c9b2124b50dcecc/">
+    <div class=3D"node__title node__expanded" data-uid=3D"6c9b2124b50dcecc"=
+ data-parentuid=3D"ef4c98f15c9f1612031f95dffca9f31e">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#4</div>
+        <div class=3D"node__name">
+            =D0=A1=D0=BE=D0=B7=D0=B4=D0=B0=D1=82=D1=8C =D0=B7=D0=B0=D0=BA=
+=D0=B0=D0=B7 =D0=B1=D0=B5=D0=B7 =D0=B8=D0=BD=D0=B3=D1=80=D0=B5=D0=B4=D0=B8=
+=D0=B5=D0=BD=D1=82=D0=BE=D0=B2 - =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=
+=D1=8C =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D1=83
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">842ms</div>
+    </div>
+</a>
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/ef4c98f15c9f1612031f95dffca9f31e/15f038852aae8136/">
+    <div class=3D"node__title node__expanded" data-uid=3D"15f038852aae8136"=
+ data-parentuid=3D"ef4c98f15c9f1612031f95dffca9f31e">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#1</div>
+        <div class=3D"node__name">
+            =D0=A1=D0=BE=D0=B7=D0=B4=D0=B0=D1=82=D1=8C =D0=B7=D0=B0=D0=BA=
+=D0=B0=D0=B7 =D1=81 =D0=BD=D0=B5=D0=B2=D0=B5=D1=80=D0=BD=D1=8B=D0=BC =D1=85=
+=D1=8D=D1=88=D0=B5=D0=BC =D0=B8=D0=BD=D0=B3=D1=80=D0=B5=D0=B4=D0=B8=D0=B5=
+=D0=BD=D1=82=D0=BE=D0=B2 - =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C=
+ =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D1=83
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">876ms</div>
+    </div>
+</a>
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/ef4c98f15c9f1612031f95dffca9f31e/340334c0e9d759e9/">
+    <div class=3D"node__title node__expanded" data-uid=3D"340334c0e9d759e9"=
+ data-parentuid=3D"ef4c98f15c9f1612031f95dffca9f31e">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#2</div>
+        <div class=3D"node__name">
+            =D0=A3=D1=81=D0=BF=D0=B5=D1=88=D0=BD=D0=BE =D1=81=D0=BE=D0=B7=
+=D0=B4=D0=B0=D1=82=D1=8C =D0=B7=D0=B0=D0=BA=D0=B0=D0=B7 =D1=81 =D0=B0=D0=B2=
+=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B5=D0=B9
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">2s 064ms</div>
+    </div>
+</a>
+        </div>
+    </div>
+    <div class=3D"node node__expanded">
+        <div class=3D"node__title long-line node__expanded" data-uid=3D"749=
+777791fc1702e78ab3acbc6963f58">
+            <span class=3D"node__arrow block__arrow"><span class=3D"angle f=
+a fa-angle-right fa-fw fa-lg"></span></span>
+                <div class=3D"node__name">
+                    UserCreationTest
+                </div>
+            <div class=3D"tree__strut">&nbsp;</div>
+            <span class=3D"node__stats">
+                <span class=3D"label label_status_passed">2</span>=20
+            </span>
+        </div>
+
+        <div class=3D"node__children">
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/749777791fc1702e78ab3acbc6963f58/96b813bbeba55636/">
+    <div class=3D"node__title node__expanded" data-uid=3D"96b813bbeba55636"=
+ data-parentuid=3D"749777791fc1702e78ab3acbc6963f58">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#1</div>
+        <div class=3D"node__name">
+            =D0=97=D0=B0=D1=80=D0=B5=D0=B3=D0=B8=D1=81=D1=82=D1=80=D0=B8=D1=
+=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=
+=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D1=81 =D0=B2=D0=B0=D0=BB=D0=B8=D0=B4=D0=
+=BD=D1=8B=D0=BC=D0=B8 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=BC=D0=B8
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">680ms</div>
+    </div>
+</a>
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/749777791fc1702e78ab3acbc6963f58/ed12f4efed249287/">
+    <div class=3D"node__title node__expanded" data-uid=3D"ed12f4efed249287"=
+ data-parentuid=3D"749777791fc1702e78ab3acbc6963f58">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#2</div>
+        <div class=3D"node__name">
+            =D0=97=D0=B0=D1=80=D0=B5=D0=B3=D0=B8=D1=81=D1=82=D1=80=D0=B8=D1=
+=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=
+=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D1=81 =D1=83=D0=B6=D0=B5 =D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=89=D0=B8=D0=BC=D0=B8 =D0=B4=D0=
+=B0=D0=BD=D0=BD=D1=8B=D0=BC=D0=B8
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">903ms</div>
+    </div>
+</a>
+        </div>
+    </div>
+    <div class=3D"node node__expanded">
+        <div class=3D"node__title long-line node__expanded" data-uid=3D"31e=
+367474d2dbd6ed6cac4ab7b7e1301">
+            <span class=3D"node__arrow block__arrow"><span class=3D"angle f=
+a fa-angle-right fa-fw fa-lg"></span></span>
+                <div class=3D"node__name">
+                    UserDataChangeTest
+                </div>
+            <div class=3D"tree__strut">&nbsp;</div>
+            <span class=3D"node__stats">
+                <span class=3D"label label_status_passed">1</span>=20
+            </span>
+        </div>
+
+        <div class=3D"node__children">
+<a class=3D"node node__leaf node__expanded" href=3D"http://192.168.1.70:202=
+48/index.html#suites/31e367474d2dbd6ed6cac4ab7b7e1301/3d63d4ae7ddf2a2e/">
+    <div class=3D"node__title node__expanded" data-uid=3D"3d63d4ae7ddf2a2e"=
+ data-parentuid=3D"31e367474d2dbd6ed6cac4ab7b7e1301">
+        <div class=3D"node__anchor">
+            <span class=3D"fa fa-check-circle fa-fw text_status_passed fa-l=
+g" data-tooltip=3D"Passed"></span>
+        </div>
+        <div class=3D"node__order">#1</div>
+        <div class=3D"node__name">
+            =D0=A3=D1=81=D0=BF=D0=B5=D1=88=D0=BD=D0=BE =D0=B8=D0=B7=D0=BC=
+=D0=B5=D0=BD=D0=B8=D1=82=D1=8C =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5 =D0=BF=
+=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D1=81 =
+=D0=B0=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B5=D0=B9
+        </div>
+        <div class=3D"tree__strut">&nbsp;</div>
+        <div class=3D"node__stats">883ms</div>
+    </div>
+</a>
+        </div>
+    </div>
+</div>
 </div></div></div></div>
+<div class=3D"gutter gutter-horizontal" style=3D"width: 7px;"></div><div cl=
+ass=3D"side-by-side__right" style=3D"width: calc(50% - 3.5px);"><div class=
+=3D"empty-view"><div class=3D"empty-view">
+    <p class=3D"empty-view__message">No item selected</p>
+</div></div></div></div></div>
 </div></div>
 <div id=3D"popup"></div>
 
@@ -266,10 +562,10 @@ l#categories">
 
 
 </body></html>
-------MultipartBoundary--rZ17TLGpzcShukILepWRMCFs2Q0TZoEfKAkV4Tndux----
+------MultipartBoundary--vjwy29Gx7CFEfA17rRPpiFDDYu5W2CWwh5zM2itorQ----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
-Content-Location: http://192.168.1.70:54268/styles.css
+Content-Location: http://192.168.1.70:20248/styles.css
 
 @charset "utf-8";
 
@@ -9834,10 +10130,10 @@ p: 50%; padding-bottom: 12px; }
 .environment__key { color: rgb(153, 153, 153); }
 
 .testresult-link:not(:last-child)::after { content: ","; }
-------MultipartBoundary--rZ17TLGpzcShukILepWRMCFs2Q0TZoEfKAkV4Tndux----
+------MultipartBoundary--vjwy29Gx7CFEfA17rRPpiFDDYu5W2CWwh5zM2itorQ----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
-Content-Location: http://192.168.1.70:54268/plugins/screen-diff/styles.css
+Content-Location: http://192.168.1.70:20248/plugins/screen-diff/styles.css
 
 @charset "utf-8";
 
@@ -9854,4 +10150,4 @@ b(255, 255, 255); position: absolute; overflow: hidden; box-shadow: rgb(170=
 , 170, 170) 2px 0px 1px -1px; }
 
 .screen-diff-error { color: rgb(253, 90, 62); }
-------MultipartBoundary--rZ17TLGpzcShukILepWRMCFs2Q0TZoEfKAkV4Tndux------
+------MultipartBoundary--vjwy29Gx7CFEfA17rRPpiFDDYu5W2CWwh5zM2itorQ------
